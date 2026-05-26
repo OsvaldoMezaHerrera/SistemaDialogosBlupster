@@ -442,6 +442,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1440147281}
   - component: {fileID: 1440147282}
+  - component: {fileID: 1440147284}
+  - component: {fileID: 1440147283}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -480,6 +482,46 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::InteractionSystem
   interactRange: 3
   playerCamera: {fileID: 330585546}
+--- !u!114 &1440147283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1440147280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e97a95514a1ec2ef6bb87c9b5e79bbd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerController
+  moveSpeed: 5
+  mouseSensitivity: 200
+  playerCamera: {fileID: 330585546}
+--- !u!143 &1440147284
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1440147280}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Height: 2
+  m_Radius: 0.5
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1519964983
 GameObject:
   m_ObjectHideFlags: 0
@@ -637,6 +679,7 @@ GameObject:
   - component: {fileID: 1913984495}
   - component: {fileID: 1913984494}
   - component: {fileID: 1913984493}
+  - component: {fileID: 1913984496}
   m_Layer: 2
   m_Name: Body_player
   m_TagString: Untagged
@@ -737,6 +780,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1913984491}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1913984496
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1913984491}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 607e2f205d63f7cf6a5937ead213735b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractionSystem
+  interactRange: 3
+  playerCamera: {fileID: 330585546}
 --- !u!1 &2131399122
 GameObject:
   m_ObjectHideFlags: 0
