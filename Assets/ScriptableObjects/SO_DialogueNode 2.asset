@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ae2062fed6783447a50a736ff97a758, type: 3}
   m_Name: SO_DialogueNode 2
   m_EditorClassIdentifier: Assembly-CSharp::DialogueNode
-  npcText: "NPC Text: \"Interesante... \xBFy c\xF3mo manejas esa situaci\xF3n normalmente?\"\r\n\r\nChoice
+  npcText: "Interesante... \xBFy c\xF3mo manejas esa situaci\xF3n normalmente?\"\r\n\r\nChoice
     0:\r\n  Choice Text: \"Hablo con alguien de confianza.\"\r\n  Confianza Change:
     +2\r\n  Estres Change: -1\r\n  Puntos Change: 15\r\n  Next Node: (vac\xEDo =
     cierra)\r\n\r\nChoice 1:\r\n  Choice Text: \"Prefiero resolverlo solo.\"\r\n 
@@ -20,4 +20,19 @@ MonoBehaviour:
     (vac\xEDo = cierra)\r\n\r\nChoice 2:\r\n  Choice Text: \"Generalmente lo ignoro.\"\r\n 
     Confianza Change: -1\r\n  Estres Change: +2\r\n  Puntos Change: 0\r\n  Next Node:
     (vac\xEDo = cierra)"
-  choices: []
+  choices:
+  - choiceText: Gracias por preguntar
+    confianzaChange: 0
+    estresChange: 0
+    puntosChange: 0
+    nextNode: {fileID: 0}
+  - choiceText: Por que me preguntas
+    confianzaChange: 0
+    estresChange: 0
+    puntosChange: 0
+    nextNode: {fileID: 0}
+  - choiceText: Ignorar
+    confianzaChange: 0
+    estresChange: 0
+    puntosChange: 0
+    nextNode: {fileID: 0}

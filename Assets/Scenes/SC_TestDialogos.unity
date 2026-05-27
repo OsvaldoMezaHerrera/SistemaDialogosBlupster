@@ -1580,8 +1580,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -40}
-  m_SizeDelta: {x: -40, y: 80}
+  m_AnchoredPosition: {x: 0, y: 80}
+  m_SizeDelta: {x: -40, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1405007390
 MonoBehaviour:
@@ -2591,10 +2591,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99a04695acbfc3f488071d5e824b7fce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::VariableBarUI
-  confianzaSlider: {fileID: 0}
-  confianzaLabel: {fileID: 0}
-  estresSlider: {fileID: 0}
-  estresLabel: {fileID: 0}
+  confianzaSlider: {fileID: 205912532}
+  confianzaLabel: {fileID: 1297043058}
+  estresSlider: {fileID: 57984910}
+  estresLabel: {fileID: 1509278035}
 --- !u!1 &1536062835
 GameObject:
   m_ObjectHideFlags: 0
