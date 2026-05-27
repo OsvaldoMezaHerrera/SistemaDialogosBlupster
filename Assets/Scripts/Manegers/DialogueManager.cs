@@ -20,14 +20,19 @@ public class DialogueManager : MonoBehaviour
     {
         isDialogueOpen = true;
         dialoguePanel.SetActive(true);
+        
+        // Liberar y mostrar el ratón
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+        
         LoadNode(startNode);
     }
 
     public void LoadNode(DialogueNode node)
     {
         currentNode = node;
-        Debug.Log("NPC dice: " + node.npcText);
-        // Aquí después llamaremos al UIManager para mostrar el texto y los botones
+        // Le avisamos a la UI que actualice la pantalla con los datos de este nodo
+        UIManager.Instance.UpdateUI(node);
     }
 
     public void SelectChoice(int choiceIndex)
@@ -57,6 +62,11 @@ public class DialogueManager : MonoBehaviour
         isDialogueOpen = false;
         dialoguePanel.SetActive(false);
         currentNode = null;
+        
+        // Ocultar y bloquear el ratón de nuevo
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+        
         Debug.Log("Conversación terminada.");
     }
 

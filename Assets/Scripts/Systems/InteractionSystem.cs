@@ -2,12 +2,16 @@ using UnityEngine;
 
 public class InteractionSystem : MonoBehaviour
 {
-    public float interactRange = 3f; // Qué tan cerca debes estar del NPC
-    public Transform playerCamera;   // Desde dónde sale el rayo (tu cámara)
+    public float interactRange = 3f; 
+    public Transform playerCamera;   
 
     void Update()
     {
-        // Solo lanzamos el rayo si el jugador presiona 'E'
+        // Si el diálogo ya está abierto, cancelamos el rayo para no abrirlo 2 veces
+        if (DialogueManager.Instance != null && DialogueManager.Instance.IsDialogueOpen())
+            return;
+
+        // Presionamos E
         if (Input.GetKeyDown(KeyCode.E))
         {
             TryInteract();
@@ -16,18 +20,21 @@ public class InteractionSystem : MonoBehaviour
 
     void TryInteract()
     {
-        // 1. Creamos el rayo que sale del centro de la cámara hacia adelante
         Ray ray = new Ray(playerCamera.position, playerCamera.forward);
         RaycastHit hitInfo;
 
-        // 2. Lanzamos el rayo físicamente en el mundo
         if (Physics.Raycast(ray, out hitInfo, interactRange))
         {
-            // 3. Verificamos si golpeó a un objeto con el Tag "NPC"
             if (hitInfo.collider.CompareTag("NPC"))
             {
-                // ¡Éxito! Imprimimos un mensaje en la consola
-                Debug.Log("¡NPC detectado! Presionaste E. Aquí abriremos la UI del diálogo.");
+                // Buscamos el script del NPC que tiene guardado tu texto
+                NPCDialogue npc = hitInfo.collider.GetComponent<NPCDialogue>();
+                
+                if (npc != null && npc.nodoInicial != null)
+                {
+                    // ¡Abrimos la interfaz visual de Brayan!
+                    DialogueManager.Instance.StartDialogue(npc.nodoInicial);
+                }
             }
         }
     }

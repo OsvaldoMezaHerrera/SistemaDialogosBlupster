@@ -12,5 +12,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ae2062fed6783447a50a736ff97a758, type: 3}
   m_Name: SO_DialogueNode
   m_EditorClassIdentifier: Assembly-CSharp::DialogueNode
-  npcText: 
-  choices: []
+  npcText: Hola que tal
+  choices:
+  - choiceText: 'Bien '
+    confianzaChange: 0
+    estresChange: 0
+    puntosChange: 0
+    nextNode: {fileID: 0}
+  - choiceText: Mal
+    confianzaChange: 0
+    estresChange: 0
+    puntosChange: 0
+    nextNode: {fileID: 0}
+  - choiceText: Maso
+    confianzaChange: 0
+    estresChange: 0
+    puntosChange: 0
+    nextNode: {fileID: 0}
