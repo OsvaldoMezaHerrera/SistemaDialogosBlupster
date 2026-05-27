@@ -9,9 +9,11 @@ public class VariableManager : MonoBehaviour
     public int estres = 0;
     public int puntos = 0;
 
+    [Header("UI")]
+    public VariableBarUI variableBarUI;
+
     void Awake()
     {
-        // Singleton: solo puede existir uno en toda la escena
         if (Instance == null)
         {
             Instance = this;
@@ -29,6 +31,7 @@ public class VariableManager : MonoBehaviour
         estres += estresChange;
         puntos += puntosChange;
 
-        Debug.Log($"Confianza: {confianza} | Estrés: {estres} | Puntos: {puntos}");
+        if (variableBarUI != null)
+            variableBarUI.ActualizarBarras(confianza, estres);
     }
 }
