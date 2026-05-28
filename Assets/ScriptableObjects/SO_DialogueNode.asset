@@ -15,14 +15,14 @@ MonoBehaviour:
   npcText: Hola, como te encuentras?
   choices:
   - choiceText: 'Bien '
-    confianzaChange: 0
-    estresChange: 0
-    puntosChange: 0
+    confianzaChange: 2
+    estresChange: -1
+    puntosChange: 10
     nextNode: {fileID: 11400000, guid: 125dbf995bcb61d449b471393b212e46, type: 2}
   - choiceText: Mal
-    confianzaChange: 0
-    estresChange: 0
-    puntosChange: 0
+    confianzaChange: 5
+    estresChange: 5
+    puntosChange: 5
     nextNode: {fileID: 11400000, guid: 125dbf995bcb61d449b471393b212e46, type: 2}
   - choiceText: Maso
     confianzaChange: 0
