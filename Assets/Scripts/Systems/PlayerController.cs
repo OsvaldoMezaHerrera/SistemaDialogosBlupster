@@ -24,6 +24,10 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        // Si el diálogo está abierto, congelamos la cámara y el movimiento al instante
+        if (DialogueManager.Instance != null && DialogueManager.Instance.IsDialogueOpen())
+            return;
+
         // --- 1. ROTACIÓN DE LA CÁMARA ---
         float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
         float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
