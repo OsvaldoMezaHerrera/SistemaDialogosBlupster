@@ -7,6 +7,9 @@ public class DialogueNode : ScriptableObject
     [TextArea(2, 5)]
     public string npcText;
 
+    [Header("Configuración de Tiempo")]
+    public float tiempoLimite = 0f;
+    
     [Header("Opciones del jugador")]
     public DialogueChoice[] choices;
 }

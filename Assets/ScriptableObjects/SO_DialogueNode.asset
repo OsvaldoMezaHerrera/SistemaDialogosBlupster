@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: SO_DialogueNode
   m_EditorClassIdentifier: Assembly-CSharp::DialogueNode
   npcText: Hola, como te encuentras?
+  tiempoLimite: 5
   choices:
   - choiceText: 'Bien '
     confianzaChange: 2

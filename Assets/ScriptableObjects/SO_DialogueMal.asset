@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: SO_DialogueMal
   m_EditorClassIdentifier: Assembly-CSharp::DialogueNode
   npcText: Que mal, hay algo que pueda hacer?
+  tiempoLimite: 5
   choices:
   - choiceText: No. pero gracias
     confianzaChange: 1

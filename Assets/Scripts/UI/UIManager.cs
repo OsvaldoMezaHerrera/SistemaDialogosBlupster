@@ -10,6 +10,9 @@ public class UIManager : MonoBehaviour
     public TextMeshProUGUI npcText;
     public Button[] choiceButtons;
     public TextMeshProUGUI[] choiceTexts;
+    
+    // Nueva variable para el texto del timer
+    public TextMeshProUGUI timerText;
 
     void Awake()
     {
@@ -19,10 +22,8 @@ public class UIManager : MonoBehaviour
 
     public void UpdateUI(DialogueNode node)
     {
-        // Muestra el texto del NPC
         npcText.text = node.npcText;
 
-        // Actualiza cada botón con su opción
         for (int i = 0; i < choiceButtons.Length; i++)
         {
             if (i < node.choices.Length)
@@ -32,16 +33,26 @@ public class UIManager : MonoBehaviour
 
                 int index = i; 
                 choiceButtons[i].onClick.RemoveAllListeners();
-                
-                // Le dice al botón qué opción debe mandar al DialogueManager
                 choiceButtons[i].onClick.AddListener(() =>
                     DialogueManager.Instance.SelectChoice(index));
             }
             else
             {
-                // Si el nodo tiene menos de 3 opciones, esconde los botones sobrantes
                 choiceButtons[i].gameObject.SetActive(false);
             }
         }
+    }
+
+    // Nueva función para actualizar el reloj en pantalla
+    public void ActualizarTimer(float tiempo)
+    {
+        // Convierte el número a formato de 1 decimal (ejemplo: 5.2)
+        timerText.text = tiempo.ToString("F1") + "s";
+    }
+
+    // Función para mostrar o esconder el reloj
+    public void MostrarTimer(bool mostrar)
+    {
+        timerText.gameObject.SetActive(mostrar);
     }
 }
