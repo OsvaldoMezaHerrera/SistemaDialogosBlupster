@@ -1,6 +1,5 @@
 using UnityEngine;
 
-// Esto asegura que Unity le ponga automáticamente el componente de físicas al jugador
 [RequireComponent(typeof(CharacterController))]
 public class PlayerController : MonoBehaviour
 {
@@ -9,22 +8,24 @@ public class PlayerController : MonoBehaviour
 
     [Header("Configuración de Cámara (Ratón)")]
     public float mouseSensitivity = 200f;
-    public Transform playerCamera; // Aquí conectaremos la cámara
+    public Transform playerCamera; 
 
     private CharacterController controller;
     private float xRotation = 0f;
 
+    // --- Variables nuevas para la gravedad ---
+    private Vector3 velocity;
+    private float gravity = -9.81f; // La fuerza de gravedad de la Tierra
+
     void Start()
     {
         controller = GetComponent<CharacterController>();
-        
-        // Esto oculta el cursor y lo bloquea en el centro de la pantalla al jugar
         Cursor.lockState = CursorLockMode.Locked;
     }
 
     void Update()
     {
-        // Si el diálogo está abierto, congelamos la cámara y el movimiento al instante
+        // Si el diálogo está abierto, congelamos la cámara y el movimiento
         if (DialogueManager.Instance != null && DialogueManager.Instance.IsDialogueOpen())
             return;
 
@@ -33,22 +34,31 @@ public class PlayerController : MonoBehaviour
         float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
 
         xRotation -= mouseY;
-        xRotation = Mathf.Clamp(xRotation, -90f, 90f); // Limita la vista para no dar volteretas hacia atrás
+        xRotation = Mathf.Clamp(xRotation, -90f, 90f); 
 
-        // Gira la cámara hacia arriba/abajo
         playerCamera.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
-        // Gira todo el cuerpo del jugador hacia los lados
         transform.Rotate(Vector3.up * mouseX);
 
 
         // --- 2. MOVIMIENTO DEL JUGADOR ---
-        float x = Input.GetAxis("Horizontal"); // Detecta A y D
-        float z = Input.GetAxis("Vertical");   // Detecta W y S
+        float x = Input.GetAxis("Horizontal"); 
+        float z = Input.GetAxis("Vertical");   
 
-        // Calcula la dirección basándose hacia dónde está mirando el jugador
         Vector3 move = transform.right * x + transform.forward * z;
-
-        // Mueve al jugador
         controller.Move(move * moveSpeed * Time.deltaTime);
+
+
+        // --- 3. GRAVEDAD ---
+        // Si estamos tocando el piso, detenemos la velocidad de caída
+        if (controller.isGrounded && velocity.y < 0)
+        {
+            velocity.y = -2f; // Lo mantenemos pegado al suelo
+        }
+
+        // Le aplicamos la fuerza de gravedad a lo largo del tiempo
+        velocity.y += gravity * Time.deltaTime;
+        
+        // Movemos al jugador hacia abajo
+        controller.Move(velocity * Time.deltaTime);
     }
 }
