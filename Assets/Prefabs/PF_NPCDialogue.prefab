@@ -125,7 +125,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 444c57d245cf71837b37d4d645fe777b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPCDialogue
-  nodoInicial: {fileID: 11400000, guid: 2fc1a4c47444b644693c3a0e63662039, type: 2}
+  nodoInicial: {fileID: 11400000, guid: 217ee3468e8643f449c51726f4e13ebf, type: 2}
 --- !u!1 &7066117563371272982
 GameObject:
   m_ObjectHideFlags: 0

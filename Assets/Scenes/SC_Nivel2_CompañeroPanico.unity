@@ -1999,10 +1999,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: NPC_Guardia
       objectReference: {fileID: 0}
+    - target: {fileID: 7066117563371272982, guid: cb924b18002d08f45a134fac2fcc160b, type: 3}
+      propertyPath: m_TagString
+      value: NPC
+      objectReference: {fileID: 0}
     - target: {fileID: 8122240844228725639, guid: cb924b18002d08f45a134fac2fcc160b, type: 3}
       propertyPath: nodoInicial
       value: 
-      objectReference: {fileID: 11400000, guid: 4dbb3a98429f0b0dc8a329b9c174b0c3, type: 2}
+      objectReference: {fileID: 11400000, guid: 217ee3468e8643f449c51726f4e13ebf, type: 2}
     - target: {fileID: 9221366876250943444, guid: cb924b18002d08f45a134fac2fcc160b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
