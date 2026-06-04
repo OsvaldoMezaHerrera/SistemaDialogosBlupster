@@ -777,21 +777,25 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "D\xCDA 43 POST-INFECCI\xD3N.\n\nEres el guardia del Refugio 04. Los suministros
-    escasean.\nAcaba de llegar un sobreviviente de la zona exterior. Se ve alterado
-    y trae un arma improvisada.\n\nTu objetivo: Evitar que la situaci\xF3n escale.
-    Controla tu estr\xE9s y no pierdas su confianza.\n\n[Presiona ESPACIO para empezar
-    tu turno]"
+  m_text: "Situaci\xF3n de Emergencia\n\nSe ha detectado una posible contaminaci\xF3n
+    biol\xF3gica dentro de las instalaciones. Los protocolos de seguridad indican
+    aislar inmediatamente las \xE1reas afectadas para evitar la propagaci\xF3n del
+    riesgo.\n\nMientras las alarmas suenan y el tiempo corre en contra, encuentras
+    a un guardia de seguridad alterado frente a una puerta de contenci\xF3n. El guardia
+    duda en cerrarla por temor a dejar personas atrapadas en la zona contaminada.\n\nTu
+    objetivo es comunicarte con \xE9l y convencerlo de tomar una decisi\xF3n antes
+    de que la situaci\xF3n empeore. Cada respuesta tendr\xE1 consecuencias y el tiempo
+    es limitado.\n\n[Presiona ESPACIO para empezar tu turno]"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
+  m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4279242963
+  m_fontColor: {r: 0.82641506, g: 0.060811583, b: 0.060811583, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -808,13 +812,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 28
-  m_fontSizeBase: 28
+  m_fontSize: 30
+  m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 33
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
