@@ -22,7 +22,7 @@ MonoBehaviour:
     confianzaChange: 5
     estresChange: 1
     puntosChange: 5
-    nextNode: {fileID: 11400000, guid: b70d43d159008c52fa5804f3005049f6, type: 2}
+    nextNode: {fileID: 11400000, guid: 203da11a07b5b9bad81beb42bca59ed0, type: 2}
   - choiceText: "Da un paso m\xE1s y activo la alarma perimetral. T\xFA no mandas
       aqu\xED, te formas como todos los dem\xE1s."
     confianzaChange: -5

@@ -67,6 +67,6 @@
         "*.sln": "*.csproj",
         "*.slnx": "*.csproj"
     },
-    "dotnet.defaultSolution": "SistemaDialogosBlupster.slnx",
+    "dotnet.defaultSolution": "Plantilla1_Sistema_Dialogos.slnx",
     "dotnet.enableWorkspaceBasedDevelopment": false
 }
